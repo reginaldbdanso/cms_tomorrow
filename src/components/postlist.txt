@@ -1,0 +1,17 @@
+ // <div className="space-y-6">
+    //   <h1 className="text-3xl font-bold">Latest Posts</h1>
+    //   {posts.map((post) => (
+    //     <div key={post._id} className="bg-white shadow-md rounded-lg p-6">
+    //       <Link to={`/post/${post._id}`} className="text-2xl font-semibold text-blue-600 hover:text-blue-800">
+    //         {post.title}
+    //       </Link>
+    //       <p className="mt-2 text-gray-600">{post.content.substring(0, 150)}...</p>
+    //       <div className="mt-4 flex items-center text-sm text-gray-500">
+    //         <User size={16} className="mr-1" />
+    //         <span className="mr-4">{post.author}</span>
+    //         <Clock size={16} className="mr-1" />
+    //         <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+    //       </div>
+    //     </div>
+    //   ))}
+    // </div>

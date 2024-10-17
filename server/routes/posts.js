@@ -29,7 +29,12 @@ router.post('/', async (req, res) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
-    author: req.body.author
+    author: req.body.author,
+    excerpt: req.body.excerpt, // New field
+    category: req.body.category, // Updated to required
+    readTime: req.body.readTime, // New field
+    coverImage: req.body.coverImage, // New field
+    authorImage: req.body.authorImage // New field
   });
 
   try {
@@ -60,6 +65,11 @@ router.patch('/:id', async (req, res) => {
     if (req.body.title) post.title = req.body.title;
     if (req.body.content) post.content = req.body.content;
     if (req.body.author) post.author = req.body.author;
+    if (req.body.excerpt) post.excerpt = req.body.excerpt;
+    if (req.body.category) post.category = req.body.category;
+    if (req.body.readTime) post.readTime = req.body.readTime;
+    if (req.body.coverImage) post.coverImage = req.body.coverImage;
+    if (req.body.authorImage) post.authorImage = req.body.authorImage;
 
     const updatedPost = await post.save();
     res.json(updatedPost);
